@@ -80,7 +80,80 @@
         @keyframes radar-sweep { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         .animate-radar { animation: radar-sweep 4s linear infinite; }
         .cert-img-modal { max-height: 70vh; object-fit: contain; }
+
+        /* ---------- LIGHT MODE ---------- */
+        html.light, html.light body {
+            background-color: #f1f5f9;
+            color: #0f172a;
+        }
+        html.light ::-webkit-scrollbar-track { background: #f1f5f9; }
+        html.light ::-webkit-scrollbar-thumb { background: #cbd5e1; }
+        html.light .crt-overlay { display: none !important; }
+        html.light .tactical-grid {
+            background-image:
+                linear-gradient(to right, rgba(245, 158, 11, 0.07) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(245, 158, 11, 0.07) 1px, transparent 1px);
+        }
+        html.light .intel-panel {
+            background: rgba(255, 255, 255, 0.94);
+            border-color: #e2e8f0;
+            box-shadow: 0 4px 18px rgba(15, 23, 42, 0.07);
+        }
+        html.light .intel-panel:hover {
+            border-color: rgba(245, 158, 11, 0.55);
+            box-shadow: 0 4px 22px rgba(245, 158, 11, 0.12);
+        }
+        html.light .text-white { color: #0f172a !important; }
+        html.light .text-slate-100 { color: #1e293b !important; }
+        html.light .text-slate-200 { color: #1e293b !important; }
+        html.light .text-slate-300 { color: #334155 !important; }
+        html.light .text-slate-400 { color: #64748b !important; }
+        html.light .text-slate-500 { color: #64748b !important; }
+        html.light .text-amber-400 { color: #b45309 !important; }
+        html.light .text-emerald-400 { color: #047857 !important; }
+        html.light .bg-slate-950 { background-color: #f8fafc !important; }
+        html.light .bg-slate-900 { background-color: #e2e8f0 !important; }
+        html.light .bg-slate-800 { background-color: #cbd5e1 !important; }
+        html.light .bg-slate-950\/60, html.light .bg-slate-950\/80 { background-color: rgba(248, 250, 252, 0.9) !important; }
+        html.light .bg-\[\#020408\] { background-color: #f1f5f9 !important; }
+        html.light .bg-amber-950\/60, html.light .bg-amber-950\/80 { background-color: #fef3c7 !important; }
+        html.light .bg-emerald-950\/60, html.light .bg-emerald-950\/80 { background-color: #d1fae5 !important; }
+        html.light .bg-red-950\/60 { background-color: #fee2e2 !important; }
+        html.light .border-slate-800 { border-color: #e2e8f0 !important; }
+        html.light .border-slate-900 { border-color: #e2e8f0 !important; }
+        html.light .border-slate-700 { border-color: #cbd5e1 !important; }
+        html.light .border-amber-500\/30, html.light .border-amber-500\/40, html.light .border-amber-500\/50, html.light .border-amber-500\/60 { border-color: rgba(245, 158, 11, 0.55) !important; }
+        html.light .border-emerald-500\/30, html.light .border-emerald-500\/40 { border-color: rgba(16, 185, 129, 0.5) !important; }
+        html.light .border-amber-800 { border-color: #fcd34d !important; }
+        html.light .border-red-800 { border-color: #fca5a5 !important; }
+        html.light .bg-amber-500 { background-color: #d97706 !important; }
+        html.light .hover\:bg-amber-400:hover { background-color: #f59e0b !important; }
+        html.light .text-black { color: #fff !important; }
+        html.light .redacted { background-color: #cbd5e1; color: #cbd5e1; }
+        html.light .redacted:hover { background-color: rgba(245, 158, 11, 0.25); color: #b45309; }
+        html.light .redacted.revealed { background-color: transparent; color: #b45309; }
+        html.light .amber-glow, html.light .phosphor-glow, html.light .crimson-glow { text-shadow: none; }
+        html.light #paywall { background: rgba(241, 245, 249, 0.88) !important; }
+        html.light #projectModal, html.light #certImageModal { background: rgba(15, 23, 42, 0.35) !important; }
+        html.light .animate-radar { opacity: 0.45; }
+        html.light .shadow-\[0_0_20px_rgba\(245\,158\,11\,0\.3\)\],
+        html.light .shadow-\[0_0_20px_rgba\(245\,158\,11\,0\.4\)\],
+        html.light .shadow-\[0_0_50px_rgba\(245\,158\,11\,0\.15\)\] { box-shadow: 0 2px 12px rgba(245, 158, 11, 0.18) !important; }
+        html.light .hover\:border-amber-500:hover { border-color: #d97706 !important; }
+        html.light .hover\:border-emerald-500:hover { border-color: #059669 !important; }
+        html.light .text-amber-500 { color: #b45309 !important; }
+        html.light .bg-amber-500\/10 { background-color: rgba(245, 158, 11, 0.12) !important; }
+        html.light #toastNotification { background: #0f172a; color: #f8fafc; border-color: #334155; }
     </style>
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('theme');
+                if (t === 'light') document.documentElement.classList.add('light');
+                else document.documentElement.classList.remove('light');
+            } catch (e) {}
+        })();
+    </script>
 </head>
 <body class="tactical-grid min-h-screen relative text-slate-100 selection:bg-amber-500 selection:text-black">
 
@@ -114,7 +187,13 @@
                 <a href="#education" class="text-slate-300 hover:text-amber-400">// 06.EDU</a>
                 <a href="#comms" class="text-slate-300 hover:text-amber-400">// 07.SEC_COMMS</a>
             </nav>
-            <button id="mobileMenuBtn" class="lg:hidden text-amber-400 p-2" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+            <div class="flex items-center space-x-2">
+                <button id="themeToggle" onclick="toggleTheme()" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded bg-slate-900 border border-slate-700 text-[11px] font-mono text-slate-300 hover:border-amber-500 hover:text-amber-400 transition-colors" aria-label="Toggle dark mode" title="Toggle dark / light mode">
+                    <i id="themeIcon" class="fa-solid fa-moon"></i>
+                    <span id="themeLabel" class="hidden sm:inline">DARK</span>
+                </button>
+                <button id="mobileMenuBtn" class="lg:hidden text-amber-400 p-2" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
         </div>
         <div id="mobileMenu" class="hidden lg:hidden px-6 pb-6 pt-2 space-y-3 border-t border-slate-800 font-mono text-xs">
             <a href="#hero" class="block text-amber-400">// 01.OVERVIEW</a>
@@ -596,6 +675,21 @@
         document.querySelectorAll('#mobileMenu a').forEach(link => {
             link.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden'));
         });
+
+        function applyThemeUI() {
+            const light = document.documentElement.classList.contains('light');
+            const icon = document.getElementById('themeIcon');
+            const label = document.getElementById('themeLabel');
+            if (!icon) return;
+            icon.className = light ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+            if (label) label.textContent = light ? 'LIGHT' : 'DARK';
+        }
+        function toggleTheme() {
+            const light = document.documentElement.classList.toggle('light');
+            try { localStorage.setItem('theme', light ? 'light' : 'dark'); } catch (e) {}
+            applyThemeUI();
+        }
+        applyThemeUI();
 
         function downloadResume() {
             const a = document.createElement('a');
