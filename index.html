@@ -362,7 +362,7 @@
 
                 <!-- Form -->
                 <div class="md:col-span-7">
-                    <form id="contactForm" onsubmit="handleContactSubmit(event)" class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm space-y-3.5">
+                    <form id="contactForm" action="https://formspree.io/f/mljglzro" method="POST" onsubmit="handleContactSubmit(event)" class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm space-y-3.5">
                         <div id="formSuccessAlert" class="hidden p-3 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-medium flex items-center space-x-2">
                             <i class="fa-solid fa-circle-check text-emerald-600"></i>
                             <span>Thank you! Your message has been sent successfully.</span>
@@ -922,17 +922,35 @@
             if (e.target === this) closeCertModal();
         });
 
-        // Contact Form
-        function handleContactSubmit(event) {
+        // Contact Form (Formspree)
+        async function handleContactSubmit(event) {
             event.preventDefault();
+            const form = document.getElementById('contactForm');
             const name = document.getElementById('senderName').value;
-            const alertBox = document.getElementById('formSuccessAlert');
-            alertBox.classList.remove('hidden');
-            document.getElementById('contactForm').reset();
-            showToast(`Thank you ${name}! Message sent successfully.`, 'fa-circle-check');
-            setTimeout(() => {
-                alertBox.classList.add('hidden');
-            }, 5000);
+            const btn = form.querySelector('button[type=submit]');
+            const originalText = btn.textContent;
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (res.ok) {
+                    const alertBox = document.getElementById('formSuccessAlert');
+                    alertBox.classList.remove('hidden');
+                    form.reset();
+                    showToast(`Thank you ${name}! Message sent successfully.`, 'fa-circle-check');
+                    setTimeout(() => { alertBox.classList.add('hidden'); }, 5000);
+                } else {
+                    showToast('Failed to send message. Please try again.', 'fa-circle-exclamation');
+                }
+            } catch (e) {
+                showToast('Failed to send message. Please try again.', 'fa-circle-exclamation');
+            }
+            btn.disabled = false;
+            btn.textContent = originalText;
         }
 
         // Toast Helper
