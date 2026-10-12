@@ -16,10 +16,10 @@
         html.dark { color-scheme: dark; }
     </style>
 </head>
-<body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-white dark:text-slate-100 antialiased selection:bg-slate-900 selection:text-white dark:selection:bg-white dark:selection:text-slate-900 dark:text-white">
+<body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-white antialiased selection:bg-slate-900 selection:text-white dark:selection:bg-white">
 
     <!-- Navigation Bar -->
-    <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 dark:bg-slate-900/95 backdrop-blur-sm border-b border-slate-100 dark:border-slate-800">
+    <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-b border-slate-100 dark:border-slate-800">
         <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="#" class="font-semibold text-slate-900 dark:text-white tracking-tight flex items-center space-x-2">
                 <span class="w-2 h-2 rounded-full bg-slate-900 dark:bg-white"></span>
@@ -27,15 +27,15 @@
             </a>
 
             <!-- Desktop Menu -->
-            <nav class="hidden md:flex items-center space-x-8 text-xs font-medium text-slate-600 dark:text-slate-400 dark:text-slate-500 dark:text-slate-400 dark:text-slate-500">
-                <a href="#about" class="hover:text-slate-900 dark:text-white dark:hover:text-white transition">About</a>
-                <a href="#skills" class="hover:text-slate-900 dark:text-white dark:hover:text-white transition">Skills</a>
-                <a href="#experience" class="hover:text-slate-900 dark:text-white dark:hover:text-white transition">Experience</a>
-                <a href="#projects" class="hover:text-slate-900 dark:text-white dark:hover:text-white transition">Projects</a>
-                <a href="#certifications" class="hover:text-slate-900 dark:text-white dark:hover:text-white transition">Certifications</a>
-                <a href="#education" class="hover:text-slate-900 dark:text-white dark:hover:text-white transition">Education</a>
-                <a href="#contact" class="hover:text-slate-900 dark:text-white dark:hover:text-white transition">Contact</a>
-                <button id="darkToggle" onclick="toggleDark()" class="text-slate-600 dark:text-slate-400 dark:text-slate-500 dark:text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:text-white dark:hover:text-white transition" aria-label="Toggle dark mode">
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-medium text-slate-600 dark:text-slate-400">
+                <a href="#about" class="hover:text-slate-900 dark:text-white transition">About</a>
+                <a href="#skills" class="hover:text-slate-900 dark:text-white transition">Skills</a>
+                <a href="#experience" class="hover:text-slate-900 dark:text-white transition">Experience</a>
+                <a href="#projects" class="hover:text-slate-900 dark:text-white transition">Projects</a>
+                <a href="#certifications" class="hover:text-slate-900 dark:text-white transition">Certifications</a>
+                <a href="#education" class="hover:text-slate-900 dark:text-white transition">Education</a>
+                <a href="#contact" class="hover:text-slate-900 dark:text-white transition">Contact</a>
+                <button id="darkToggle" onclick="toggleDark()" class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:text-white transition" aria-label="Toggle dark mode">
                     <i id="darkIcon" class="fa-solid fa-moon text-sm"></i>
                 </button>
             </nav>
@@ -48,14 +48,14 @@
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobileMenu" class="hidden md:hidden px-6 pb-6 pt-2 space-y-3 border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
-            <a href="#about" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white dark:hover:text-white">About</a>
-            <a href="#skills" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white dark:hover:text-white">Skills</a>
-            <a href="#experience" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white dark:hover:text-white">Experience</a>
-            <a href="#projects" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white dark:hover:text-white">Projects</a>
-            <a href="#certifications" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white dark:hover:text-white">Certifications</a>
-            <a href="#education" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white dark:hover:text-white">Education</a>
-            <a href="#contact" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white dark:hover:text-white">Contact</a>
-            <button onclick="toggleDark()" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white dark:hover:text-white">
+            <a href="#about" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white">About</a>
+            <a href="#skills" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white">Skills</a>
+            <a href="#experience" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white">Experience</a>
+            <a href="#projects" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white">Projects</a>
+            <a href="#certifications" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white">Certifications</a>
+            <a href="#education" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white">Education</a>
+            <a href="#contact" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white">Contact</a>
+            <button onclick="toggleDark()" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white">
                 <i class="fa-solid fa-moon mr-1"></i> Toggle Dark Mode
             </button>
         </div>
@@ -74,16 +74,16 @@
                     Carlo V. Garcia
                 </h1>
 
-                <p class="text-lg font-medium text-slate-600 dark:text-slate-400 dark:text-slate-500">
+                <p class="text-lg font-medium text-slate-600 dark:text-slate-400">
                     Future Network Engineer & Networking Specialist
                 </p>
 
-                <p class="text-slate-600 dark:text-slate-400 dark:text-slate-500 text-sm leading-relaxed max-w-xl">
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-xl">
                     Information Technology undergraduate specializing in Network Infrastructure, Routing & Switching, and Cybersecurity Protocols at Isabela State University. Focused on designing resilient enterprise networks and secure system architectures.
                 </p>
 
                 <div class="flex flex-wrap items-center gap-3 pt-2">
-                    <a href="#contact" class="px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-200 dark:text-slate-900 text-white font-medium text-xs transition">
+                    <a href="#contact" class="px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 dark:bg-white text-white font-medium text-xs transition">
                         Get in Touch
                     </a>
                     <button onclick="downloadResume()" class="px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium text-xs transition">
@@ -91,7 +91,7 @@
                     </button>
                 </div>
 
-                <div class="flex items-center space-x-4 pt-2 text-slate-500 dark:text-slate-400 dark:text-slate-500 text-xs">
+                <div class="flex items-center space-x-4 pt-2 text-slate-500 dark:text-slate-400 text-xs">
                     <a href="https://www.linkedin.com/in/carlogarcia-sample" target="_blank" class="hover:text-slate-900 dark:text-white transition"><i class="fa-brands fa-linkedin mr-1"></i> LinkedIn</a>
                     <span>·</span>
                     <a href="https://github.com/carlogarcia-dev" target="_blank" class="hover:text-slate-900 dark:text-white transition"><i class="fa-brands fa-github mr-1"></i> GitHub</a>
@@ -122,7 +122,7 @@
                     <h4 class="font-semibold text-slate-900 dark:text-white text-sm flex items-center">
                         <i class="fa-solid fa-bullseye text-slate-700 dark:text-slate-300 mr-2"></i> Career Objectives
                     </h4>
-                    <p class="text-slate-600 dark:text-slate-400 dark:text-slate-500 text-xs leading-relaxed">
+                    <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">
                         To secure a position as a Junior Network Engineer or Systems Administrator where I can utilize my expertise in Cisco routing, network segmentation, and security hardening to maintain reliable, secure enterprise networks.
                     </p>
                 </div>
@@ -222,13 +222,13 @@
                         <div>
                             <span class="text-[10px] font-semibold uppercase text-slate-400 dark:text-slate-500">Work Experience / OJT</span>
                             <h4 class="font-bold text-slate-900 dark:text-white text-sm mt-0.5">Network Operations Intern</h4>
-                            <p class="text-slate-600 dark:text-slate-400 dark:text-slate-500 text-xs">Enterprise IT Solutions • Regional Hub</p>
+                            <p class="text-slate-600 dark:text-slate-400 text-xs">Enterprise IT Solutions • Regional Hub</p>
                         </div>
                         <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-[11px] font-medium self-start sm:self-auto">
                             Jun 2025 – Dec 2025
                         </span>
                     </div>
-                    <ul class="list-disc list-inside space-y-1.5 text-slate-600 dark:text-slate-400 dark:text-slate-500 text-xs leading-relaxed">
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-600 dark:text-slate-400 text-xs leading-relaxed">
                         <li>Assisted senior network engineers in configuring Cisco routers, switches, and structured cabling for branch offices.</li>
                         <li>Configured and verified VLAN segmentation and inter-VLAN routing to optimize broadcast domain efficiency.</li>
                         <li>Monitored network traffic logs and implemented firewall security rules to mitigate unauthorized access attempts.</li>
@@ -255,13 +255,13 @@
                             <span class="text-[11px] text-slate-400 dark:text-slate-500">2026</span>
                         </div>
                         <h4 class="font-bold text-slate-900 dark:text-white text-sm">Cashier Registry Check System</h4>
-                        <p class="text-[11px] font-medium text-slate-500 dark:text-slate-400 dark:text-slate-500">Role:Member</p>
-                        <p class="text-slate-600 dark:text-slate-400 dark:text-slate-500 text-xs leading-relaxed line-clamp-3">
+                        <p class="text-[11px] font-medium text-slate-500 dark:text-slate-400">Role:Member</p>
+                        <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed line-clamp-3">
                             Automating the Cashier Registry process.
                         </p>
                         <div class="flex flex-wrap gap-1 pt-1">
-                            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 dark:text-slate-500 text-[10px] font-medium">Python</span>
-                            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 dark:text-slate-500 text-[10px] font-medium">VS Code</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-medium">Python</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-medium">VS Code</span>
                         </div>
                     </div>
                    <!-- <div class="p-5 pt-0 border-t border-slate-100 dark:border-slate-800 mt-3 flex items-center justify-between">
@@ -301,7 +301,7 @@
                     <div class="space-y-1">
                         <span class="text-[10px] font-semibold uppercase text-slate-400 dark:text-slate-500">Tertiary Education</span>
                         <h4 class="font-bold text-slate-900 dark:text-white text-sm">Bachelor of Science in Information Technology (BSIT)</h4>
-                        <p class="text-slate-600 dark:text-slate-400 dark:text-slate-500 text-xs">Isabela State University • Specialization in Networking</p>
+                        <p class="text-slate-600 dark:text-slate-400 text-xs">Isabela State University • Specialization in Networking</p>
                         <p class="text-[11px] font-medium text-emerald-600 pt-0.5">Expected Graduation: 2027</p>
                     </div>
                     <span class="px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold self-start sm:self-auto">
@@ -314,7 +314,7 @@
                     <div class="space-y-1">
                         <span class="text-[10px] font-semibold uppercase text-slate-400 dark:text-slate-500">Secondary Education</span>
                         <h4 class="font-bold text-slate-900 dark:text-white text-sm">Senior High School (General Academic Strand)</h4>
-                        <p class="text-slate-600 dark:text-slate-400 dark:text-slate-500 text-xs">Cauayan City National High School Research Annex</p>
+                        <p class="text-slate-600 dark:text-slate-400 text-xs">Cauayan City National High School Research Annex</p>
                     </div>
                     <span class="px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold self-start sm:self-auto">
                         2021 – 2022
@@ -326,7 +326,7 @@
                     <div class="space-y-1">
                         <span class="text-[10px] font-semibold uppercase text-slate-400 dark:text-slate-500">Elementary Education</span>
                         <h4 class="font-bold text-slate-900 dark:text-white text-sm">San Francisco Elementary School</h4>
-                        <p class="text-slate-600 dark:text-slate-400 dark:text-slate-500 text-xs">San Francisco, Cauayan City, Isabela</p>
+                        <p class="text-slate-600 dark:text-slate-400 text-xs">San Francisco, Cauayan City, Isabela</p>
                     </div>
                     <span class="px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold self-start sm:self-auto">
                         2014 – 2015
@@ -349,7 +349,7 @@
                 <div class="md:col-span-5 space-y-4">
                     <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700/80 shadow-sm space-y-4">
                         <h4 class="font-bold text-slate-900 dark:text-white text-sm">Contact Information</h4>
-                        <div class="space-y-2.5 text-xs text-slate-600 dark:text-slate-400 dark:text-slate-500">
+                        <div class="space-y-2.5 text-xs text-slate-600 dark:text-slate-400">
                             <div class="flex items-center space-x-3">
                                 <i class="fa-solid fa-envelope text-slate-400 dark:text-slate-500 w-4"></i>
                                 <span>carlogarcia120823@gmail.com</span>
@@ -361,8 +361,8 @@
                         </div>
 
                         <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex space-x-4 text-xs">
-                            <a href="https://www.linkedin.com/in/carlogarcia-sample" target="_blank" class="text-slate-600 dark:text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:text-white font-medium"><i class="fa-brands fa-linkedin mr-1"></i> LinkedIn</a>
-                            <a href="https://github.com/carlogarcia-dev" target="_blank" class="text-slate-600 dark:text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:text-white font-medium"><i class="fa-brands fa-github mr-1"></i> GitHub</a>
+                            <a href="https://www.linkedin.com/in/carlogarcia-sample" target="_blank" class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:text-white font-medium"><i class="fa-brands fa-linkedin mr-1"></i> LinkedIn</a>
+                            <a href="https://github.com/carlogarcia-dev" target="_blank" class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:text-white font-medium"><i class="fa-brands fa-github mr-1"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -398,7 +398,7 @@
                             <textarea id="senderMessage" rows="3" required class="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-slate-900 focus:outline-none text-xs" placeholder="Type your message here..."></textarea>
                         </div>
 
-                        <button type="submit" class="w-full py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-200 dark:text-slate-900 text-white dark:text-slate-900 font-semibold text-xs transition">
+                        <button type="submit" class="w-full py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 dark:bg-white text-white dark:text-slate-900 font-semibold text-xs transition">
                             Send Message
                         </button>
                     </form>
@@ -427,7 +427,7 @@
                 <h3 id="modalProjectTitle" class="text-lg font-bold text-slate-900 dark:text-white"></h3>
             </div>
 
-            <div class="space-y-3 text-xs text-slate-600 dark:text-slate-400 dark:text-slate-500">
+            <div class="space-y-3 text-xs text-slate-600 dark:text-slate-400">
                 <div>
                     <h4 class="font-semibold text-slate-900 dark:text-white mb-0.5">Project Overview</h4>
                     <p id="modalProjectDesc" class="leading-relaxed"></p>
@@ -461,7 +461,7 @@
             <div class="sticky top-0 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 px-5 py-3.5 flex items-center justify-between rounded-t-xl">
                 <div class="pr-8">
                     <h4 id="certModalTitle" class="font-bold text-slate-900 dark:text-white text-sm leading-tight"></h4>
-                    <p id="certModalSubtitle" class="text-[11px] text-slate-500 dark:text-slate-400 dark:text-slate-500 mt-0.5"></p>
+                    <p id="certModalSubtitle" class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5"></p>
                 </div>
                 <button onclick="closeCertModal()" class="text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:text-slate-300 absolute top-3.5 right-5">
                     <i class="fa-solid fa-xmark text-base"></i>
@@ -495,7 +495,7 @@
                 <div class="flex justify-between"><span class="text-slate-400 dark:text-slate-500">Date:</span> <span id="verDate" class="font-semibold text-slate-800 dark:text-slate-100 text-right"></span></div>
                 <div class="flex justify-between"><span class="text-slate-400 dark:text-slate-500">ID:</span> <span id="verId" class="font-mono font-bold text-slate-900 dark:text-white text-right"></span></div>
             </div>
-            <button onclick="closeVerificationModal()" class="w-full py-2 rounded bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-200 dark:text-slate-900 text-white font-semibold text-xs transition">Close</button>
+            <button onclick="closeVerificationModal()" class="w-full py-2 rounded bg-slate-900 hover:bg-slate-800 dark:bg-white text-white font-semibold text-xs transition">Close</button>
         </div>
     </div>
 
@@ -507,7 +507,7 @@
             </div>
             <span class="text-[11px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full uppercase tracking-wider">Payment Required</span>
             <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-3">This Portfolio Is Locked</h3>
-            <p class="text-sm text-slate-500 dark:text-slate-400 dark:text-slate-500 mt-3 leading-relaxed">
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-3 leading-relaxed">
                 The portfolio is locked until the payment is completed. Enter the email address you paid with — you'll sign in to PayContract and, once your payment is verified, come straight back here unlocked.
             </p>
 
@@ -516,13 +516,13 @@
                 class="w-full rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 outline-none transition" />
 
             <button id="paywall-continue" type="button"
-                class="mt-3 w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-200 dark:text-slate-900 disabled:opacity-60 text-white font-bold py-3.5 rounded-xl shadow-lg transition transform active:scale-95">
+                class="mt-3 w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 dark:bg-white disabled:opacity-60 text-white font-bold py-3.5 rounded-xl shadow-lg transition transform active:scale-95">
                 <span>Sign in to Unlock</span>
                 <i class="fa-solid fa-arrow-right text-xs"></i>
             </button>
 
             <button id="paywall-subscribe" type="button"
-                class="mt-3 w-full inline-flex items-center justify-center gap-2 border border-slate-200 dark:border-slate-700 hover:border-slate-900 hover:text-slate-900 dark:text-white text-slate-600 dark:text-slate-400 dark:text-slate-500 font-bold py-3.5 rounded-xl transition">
+                class="mt-3 w-full inline-flex items-center justify-center gap-2 border border-slate-200 dark:border-slate-700 hover:border-slate-900 hover:text-slate-900 dark:text-white text-slate-600 dark:text-slate-400 font-bold py-3.5 rounded-xl transition">
                 <i class="fa-solid fa-bolt text-xs"></i>
                 <span>Subscribe for early access</span>
             </button>
@@ -893,11 +893,11 @@
                     <div class="space-y-1.5">
                         <span class="text-[10px] font-semibold uppercase text-slate-400 dark:text-slate-500">${c.cat}</span>
                         <h4 class="font-bold text-slate-900 dark:text-white text-sm">${c.title}</h4>
-                        <p class="text-xs text-slate-500 dark:text-slate-400 dark:text-slate-500">${c.org}</p>
-                        <p class="text-xs text-slate-600 dark:text-slate-400 dark:text-slate-500"><i class="fa-regular fa-calendar mr-1 text-slate-400 dark:text-slate-500"></i> ${c.date}</p>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">${c.org}</p>
+                        <p class="text-xs text-slate-600 dark:text-slate-400"><i class="fa-regular fa-calendar mr-1 text-slate-400 dark:text-slate-500"></i> ${c.date}</p>
                     </div>
                     <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-                        <button onclick="openCertModal('${c.img}','${c.title.replace(/'/g, "\\'")}','${c.org} • ${c.date}')" class="text-[11px] font-medium text-slate-600 dark:text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:text-white"><i class="fa-solid fa-image mr-1"></i> View Image</button>
+                        <button onclick="openCertModal('${c.img}','${c.title.replace(/'/g, "\\'")}','${c.org} • ${c.date}')" class="text-[11px] font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:text-white"><i class="fa-solid fa-image mr-1"></i> View Image</button>
                         ${c.verify ? `<span class="text-[10px] font-mono text-slate-400 dark:text-slate-500">${c.verify}</span>` : ''}
                     </div>
                 </div>
