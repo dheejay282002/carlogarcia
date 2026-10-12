@@ -96,7 +96,7 @@
             <!-- Profile Photograph -->
             <div class="md:col-span-4 flex justify-center">
                 <div class="w-48 h-48 md:w-56 md:h-56 rounded-xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm">
-                    <img src="assets/avatar.png" alt="Carlo Garcia Professional Photograph" class="w-full h-full object-cover">
+                    <img src="assets/profile.jpg" alt="Carlo Garcia Professional Photograph" class="w-full h-full object-cover object-top">
                 </div>
             </div>
         </div>
@@ -283,7 +283,7 @@
                             <span class="text-[10px] font-semibold uppercase text-slate-400">Simulation</span>
                             <span class="text-[11px] text-slate-400">2026</span>
                         </div>
-                        <h4 class="font-bold text-slate-900 text-sm">Cashier Registry Check System</h4>
+                        <h4 class="font-bold text-slate-900 text-sm">Enterprise VLAN & Inter-VLAN Routing</h4>
                         <p class="text-[11px] font-medium text-slate-500">Role: Network Designer & Engineer</p>
                         <p class="text-slate-600 text-xs leading-relaxed line-clamp-3">
                             Simulated multi-department enterprise network using Cisco Packet Tracer implementing 802.1Q trunking and router-on-a-stick topology.
@@ -300,6 +300,56 @@
                         <a href="https://github.com/carlogarcia-dev/vlan-lab" target="_blank" class="text-slate-400 hover:text-slate-700 text-xs"><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm flex flex-col justify-between overflow-hidden">
+                    <div class="p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-semibold uppercase text-slate-400">Security</span>
+                            <span class="text-[11px] text-slate-400">2025</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm">Secure Campus Firewall & ACL Setup</h4>
+                        <p class="text-[11px] font-medium text-slate-500">Role: Security Specialist</p>
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3">
+                            Implementation of standard and extended Access Control Lists (ACLs) to secure academic laboratory subnets from unauthorized access.
+                        </p>
+                        <div class="flex flex-wrap gap-1 pt-1">
+                            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 text-[10px] font-medium">Access Control Lists</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 text-[10px] font-medium">Firewall Rules</span>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 border-t border-slate-100 mt-3 flex items-center justify-between">
+                        <button onclick="openProjectModal('Secure Campus Firewall & ACL Setup', 'Security Specialist', 'A security hardening project designed to restrict unauthorized host-to-host communication across university subnets using strict ingress and egress ACL filters.', ['Cisco ASA / Router ACLs', 'IP Sec Security Principles', 'Wireshark Packet Analysis'], ['Developed wildcard mask filter rules for sensitive database zones', 'Performed penetration testing and packet sniffing verification', 'Reduced broadcast storm vulnerabilities'], 'assets/shot-acl-rules.jpg', 'assets/shot-wireshark.jpg')" class="text-xs font-semibold text-slate-900 hover:underline">
+                            View Details <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i>
+                        </button>
+                        <a href="https://github.com/carlogarcia-dev/campus-acl" target="_blank" class="text-slate-400 hover:text-slate-700 text-xs"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm flex flex-col justify-between overflow-hidden">
+                    <div class="p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-semibold uppercase text-slate-400">Utility</span>
+                            <span class="text-[11px] text-slate-400">2025</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm">Automated Network Monitoring Tool</h4>
+                        <p class="text-[11px] font-medium text-slate-500">Role: Python Programmer</p>
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3">
+                            Python-based utility script for ping sweeps, port scanning, and automated uptime alerts for connected server endpoints.
+                        </p>
+                        <div class="flex flex-wrap gap-1 pt-1">
+                            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 text-[10px] font-medium">Python</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 text-[10px] font-medium">Socket Programming</span>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 border-t border-slate-100 mt-3 flex items-center justify-between">
+                        <button onclick="openProjectModal('Automated Network Monitoring Tool', 'Python Programmer', 'A lightweight desktop and terminal monitoring application that pings designated IP ranges every 60 seconds and logs latency drops or outages.', ['Python 3.11', 'Socket & Subnet Libraries', 'CSV Logging System'], ['Built multi-threaded ping sweep algorithms for rapid subnet discovery', 'Implemented automated email alert triggers on packet loss', 'Generated daily availability report summaries'], 'assets/shot-monitor-cli.jpg', 'assets/shot-monitor-report.jpg')" class="text-xs font-semibold text-slate-900 hover:underline">
+                            View Details <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i>
+                        </button>
+                        <a href="https://github.com/carlogarcia-dev/net-monitor" target="_blank" class="text-slate-400 hover:text-slate-700 text-xs"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -312,51 +362,7 @@
                 <h3 class="text-xl font-bold text-slate-900">Eligibility, IT Certifications & Training</h3>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-
-                <!-- Cert 2 -->
-                <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-4">
-                    <div class="space-y-1.5">
-                        <span class="text-[10px] font-semibold uppercase text-slate-400">IT Certification</span>
-                        <h4 class="font-bold text-slate-900 text-sm">Cisco Certified Support Technician (CCST) Networking</h4>
-                        <p class="text-xs text-slate-500">Cisco Networking Academy</p>
-                        <p class="text-xs text-slate-600"><i class="fa-regular fa-calendar mr-1 text-slate-400"></i> Earned: August 2025</p>
-                    </div>
-                    <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
-                        <a href="assets/cert-ccst.jpg" target="_blank" class="text-[11px] font-medium text-slate-600 hover:text-slate-900"><i class="fa-solid fa-image mr-1"></i> View Image</a>
-                        <a href="#" onclick="showVerificationModal('CCST Networking', 'Cisco Systems', 'August 2025', 'CSCO-CCST-9942018')" class="text-xs font-semibold text-slate-900 hover:underline">Verify Badge <i class="fa-solid fa-external-link-alt ml-0.5 text-[9px]"></i></a>
-                    </div>
-                </div>
-
-                <!-- Cert 3 -->
-                <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-4">
-                    <div class="space-y-1.5">
-                        <span class="text-[10px] font-semibold uppercase text-slate-400">National Certification</span>
-                        <h4 class="font-bold text-slate-900 text-sm">TESDA NC II - Computer Systems Servicing</h4>
-                        <p class="text-xs text-slate-500">TESDA Philippines</p>
-                        <p class="text-xs text-slate-600"><i class="fa-regular fa-calendar mr-1 text-slate-400"></i> Earned: July 2024</p>
-                    </div>
-                    <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
-                        <a href="assets/cert-tesda.jpg" target="_blank" class="text-[11px] font-medium text-slate-600 hover:text-slate-900"><i class="fa-solid fa-image mr-1"></i> View Image</a>
-                        <a href="#" onclick="showVerificationModal('Computer Systems Servicing NC II', 'TESDA', 'July 2024', 'TESDA-CSS-2024-5512')" class="text-xs font-semibold text-slate-900 hover:underline">Verify Record <i class="fa-solid fa-external-link-alt ml-0.5 text-[9px]"></i></a>
-                    </div>
-                </div>
-
-                <!-- Cert 4 -->
-                <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-4">
-                    <div class="space-y-1.5">
-                        <span class="text-[10px] font-semibold uppercase text-slate-400">Training Certificate</span>
-                        <h4 class="font-bold text-slate-900 text-sm">Cybersecurity Fundamentals & Threat Mitigation</h4>
-                        <p class="text-xs text-slate-500">National Cybersecurity Training Seminar</p>
-                        <p class="text-xs text-slate-600"><i class="fa-regular fa-calendar mr-1 text-slate-400"></i> Attended: May 2025</p>
-                    </div>
-                    <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
-                        <a href="assets/cert-cyber.jpg" target="_blank" class="text-[11px] font-medium text-slate-600 hover:text-slate-900"><i class="fa-solid fa-image mr-1"></i> View Image</a>
-                        <a href="#" onclick="showVerificationModal('Cybersecurity Fundamentals', 'National Seminar Guild', 'May 2025', 'SEC-TRAIN-2025-014')" class="text-xs font-semibold text-slate-900 hover:underline">Verify Certificate <i class="fa-solid fa-external-link-alt ml-0.5 text-[9px]"></i></a>
-                    </div>
-                </div>
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="certGrid">
         </div>
     </section>
 
@@ -375,7 +381,7 @@
                         <span class="text-[10px] font-semibold uppercase text-slate-400">Tertiary Education</span>
                         <h4 class="font-bold text-slate-900 text-sm">Bachelor of Science in Information Technology (BSIT)</h4>
                         <p class="text-slate-600 text-xs">Isabela State University • Specialization in Networking</p>
-                        <p class="text-[11px] font-medium text-emerald-600 pt-0.5">Expected Graduation: 2027</p>
+                        <p class="text-[11px] font-medium text-emerald-600 pt-0.5">Dean's Lister • Expected Graduation: 2027</p>
                     </div>
                     <span class="px-3 py-1.5 rounded bg-slate-100 text-slate-700 text-xs font-semibold self-start sm:self-auto">
                         2023 – 2027
@@ -386,11 +392,12 @@
                 <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div class="space-y-1">
                         <span class="text-[10px] font-semibold uppercase text-slate-400">Secondary Education</span>
-                        <h4 class="font-bold text-slate-900 text-sm">Senior High School (General Academic Strand)</h4>
-                        <p class="text-slate-600 text-xs">Cauayan City National High School Research Annex</p>
+                        <h4 class="font-bold text-slate-900 text-sm">Senior High School (STEM Strand)</h4>
+                        <p class="text-slate-600 text-xs">Naguilian National High School</p>
+                        <p class="text-[11px] font-medium text-slate-500 pt-0.5">Graduated with Honors</p>
                     </div>
                     <span class="px-3 py-1.5 rounded bg-slate-100 text-slate-700 text-xs font-semibold self-start sm:self-auto">
-                        2021 – 2022
+                        2021 – 2023
                     </span>
                 </div>
 
@@ -398,11 +405,11 @@
                 <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div class="space-y-1">
                         <span class="text-[10px] font-semibold uppercase text-slate-400">Elementary Education</span>
-                        <h4 class="font-bold text-slate-900 text-sm">San Francisco Elementary School</h4>
-                        <p class="text-slate-600 text-xs">San Francisco, Cauayan City, Isabela</p>
+                        <h4 class="font-bold text-slate-900 text-sm">Elementary School Diploma</h4>
+                        <p class="text-slate-600 text-xs">Naguilian Central Elementary School</p>
                     </div>
                     <span class="px-3 py-1.5 rounded bg-slate-100 text-slate-700 text-xs font-semibold self-start sm:self-auto">
-                        2014 – 2015
+                        2015 – 2021
                     </span>
                 </div>
             </div>
@@ -433,7 +440,7 @@
                             </div>
                             <div class="flex items-center space-x-3">
                                 <i class="fa-solid fa-location-dot text-slate-400 w-4"></i>
-                                <span>San Franci</span>
+                                <span>Naguilian, Isabela, Philippines</span>
                             </div>
                         </div>
 
@@ -526,6 +533,27 @@
 
             <div class="pt-3 border-t border-slate-100 flex justify-end">
                 <button onclick="closeProjectModal()" class="px-3.5 py-1.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificate Image Modal -->
+    <div id="certImageModal" class="fixed inset-0 z-50 hidden bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-3xl w-full border border-slate-200 shadow-xl relative max-h-[90vh] overflow-y-auto">
+            <div class="sticky top-0 bg-white border-b border-slate-100 px-5 py-3.5 flex items-center justify-between rounded-t-xl">
+                <div class="pr-8">
+                    <h4 id="certModalTitle" class="font-bold text-slate-900 text-sm leading-tight"></h4>
+                    <p id="certModalSubtitle" class="text-[11px] text-slate-500 mt-0.5"></p>
+                </div>
+                <button onclick="closeCertModal()" class="text-slate-400 hover:text-slate-700 absolute top-3.5 right-5">
+                    <i class="fa-solid fa-xmark text-base"></i>
+                </button>
+            </div>
+            <div class="p-4 bg-slate-50">
+                <img id="certModalImg" src="" alt="Certificate Image" class="w-full rounded border border-slate-200 bg-white">
+            </div>
+            <div class="px-5 py-3 border-t border-slate-100 flex justify-end">
+                <button onclick="closeCertModal()" class="px-3.5 py-1.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition">Close</button>
             </div>
         </div>
     </div>
@@ -921,6 +949,69 @@
         function closeVerificationModal() {
             document.getElementById('verificationModal').classList.add('hidden');
         }
+
+        // Certificate Image Modal
+        const CERTS = [
+            { img: 'assets/cert-it-specialist-networking.jpg', cat: 'Professional Certification', title: 'IT Specialist — Networking', org: 'Certiport (Pearson VUE)', date: 'December 8, 2025', verify: 'RqkA-4wUY' },
+            { img: 'assets/cert-networking-devices.jpg', cat: 'Cisco Networking Academy', title: 'Networking Devices & Initial Configuration', org: 'Cisco Networking Academy', date: 'April 23, 2026' },
+            { img: 'assets/cert-networking-basics.jpg', cat: 'Cisco Networking Academy', title: 'Networking Basics', org: 'Cisco Networking Academy', date: 'September 18, 2026' },
+            { img: 'assets/cert-network-defense.jpg', cat: 'Cisco Networking Academy', title: 'Network Defense', org: 'Cisco Networking Academy', date: 'April 23, 2026' },
+            { img: 'assets/cert-cyber-threat-mgmt.jpg', cat: 'Cisco Networking Academy', title: 'Cyber Threat Management', org: 'Cisco Networking Academy', date: 'April 23, 2026' },
+            { img: 'assets/cert-endpoint-security.jpg', cat: 'Cisco Networking Academy', title: 'Endpoint Security', org: 'Cisco Networking Academy', date: 'April 28, 2026' },
+            { img: 'assets/cert-intro-cybersecurity.jpg', cat: 'Cisco Networking Academy', title: 'Introduction to Cybersecurity', org: 'Cisco Networking Academy', date: 'April 23, 2026' },
+            { img: 'assets/cert-computer-hardware-basics.jpg', cat: 'Cisco Networking Academy', title: 'Computer Hardware Basics', org: 'Cisco Networking Academy', date: 'April 23, 2026' },
+            { img: 'assets/cert-tesda-ms-cyber.jpg', cat: 'National Certification', title: 'Microsoft Cybersecurity: Security, Compliance & Identity Fundamentals', org: 'TESDA Philippines', date: 'August 14, 2026' },
+            { img: 'assets/cert-gicast.jpg', cat: 'Cybersecurity Training', title: 'GICAST — Gamified Intelligent Cyber Aptitude & Skills Training', org: 'The Open University (OpenLearn)', date: 'July 31, 2026' },
+            { img: 'assets/cert-openlearn-intro-cyber.jpg', cat: 'Cybersecurity Training', title: 'Introduction to Cybersecurity: Stay Safe Online', org: 'The Open University (OpenLearn)', date: 'May 21, 2025' },
+            { img: 'assets/cert-csa-ai-state-trust.jpg', cat: 'Conference / Summit', title: 'AI Security Summit 2026 — State of Trust (0.5 credits)', org: 'Cloud Security Alliance (CSA)', date: 'September 16–17, 2026' },
+            { img: 'assets/cert-csa-ai-cxo-trust.jpg', cat: 'Conference / Summit', title: 'AI Security Summit 2026 — CxO Trust (5.5 credits)', org: 'Cloud Security Alliance (CSA)', date: 'August 19, 2026' },
+        ];
+
+        function renderCerts() {
+            const grid = document.getElementById('certGrid');
+            if (!grid) return;
+            grid.innerHTML = CERTS.map((c, i) => `
+                <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-4">
+                    <div class="space-y-1.5">
+                        <span class="text-[10px] font-semibold uppercase text-slate-400">${c.cat}</span>
+                        <h4 class="font-bold text-slate-900 text-sm">${c.title}</h4>
+                        <p class="text-xs text-slate-500">${c.org}</p>
+                        <p class="text-xs text-slate-600"><i class="fa-regular fa-calendar mr-1 text-slate-400"></i> ${c.date}</p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                        <button onclick="openCertModal('${c.img}','${c.title.replace(/'/g, "\\'")}','${c.org} • ${c.date}')" class="text-[11px] font-medium text-slate-600 hover:text-slate-900"><i class="fa-solid fa-image mr-1"></i> View Image</button>
+                        ${c.verify ? `<span class="text-[10px] font-mono text-slate-400">${c.verify}</span>` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+        renderCerts();
+
+        function openCertModal(imgSrc, title, subtitle) {
+            document.getElementById('certModalImg').src = imgSrc;
+            document.getElementById('certModalImg').alt = title;
+            document.getElementById('certModalTitle').innerText = title;
+            document.getElementById('certModalSubtitle').innerText = subtitle || '';
+            document.getElementById('certImageModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCertModal() {
+            document.getElementById('certImageModal').classList.add('hidden');
+            document.getElementById('certModalImg').src = '';
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeCertModal();
+                closeProjectModal();
+                closeVerificationModal();
+            }
+        });
+        document.getElementById('certImageModal').addEventListener('click', function(e) {
+            if (e.target === this) closeCertModal();
+        });
 
         // Contact Form
         function handleContactSubmit(event) {
