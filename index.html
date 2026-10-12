@@ -12,47 +12,52 @@
     <!-- Google Fonts Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #9146ff; }
-        section { background-color: transparent !important; border-color: rgba(255,255,255,0.2) !important; }
-        header { background-color: rgba(255,255,255,0.95) !important; }
+        body { font-family: 'Inter', sans-serif; }
+        html.dark { color-scheme: dark; }
     </style>
 </head>
-<body class="bg-violet text-slate-900 antialiased selection:bg-slate-900 selection:text-white" style="background-color:#9146ff">
+<body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-white dark:text-slate-100 antialiased selection:bg-slate-900 selection:text-white dark:selection:bg-white dark:selection:text-slate-900 dark:text-white">
 
     <!-- Navigation Bar -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100">
+    <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 dark:bg-slate-900/95 backdrop-blur-sm border-b border-slate-100 dark:border-slate-800">
         <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="font-semibold text-slate-900 tracking-tight flex items-center space-x-2">
-                <span class="w-2 h-2 rounded-full bg-slate-900"></span>
+            <a href="#" class="font-semibold text-slate-900 dark:text-white tracking-tight flex items-center space-x-2">
+                <span class="w-2 h-2 rounded-full bg-slate-900 dark:bg-white"></span>
                 <span class="font-mono text-sm">carlogarcia.online</span>
             </a>
 
             <!-- Desktop Menu -->
-            <nav class="hidden md:flex items-center space-x-8 text-xs font-medium text-slate-600">
-                <a href="#about" class="hover:text-slate-900 transition">About</a>
-                <a href="#skills" class="hover:text-slate-900 transition">Skills</a>
-                <a href="#experience" class="hover:text-slate-900 transition">Experience</a>
-                <a href="#projects" class="hover:text-slate-900 transition">Projects</a>
-                <a href="#certifications" class="hover:text-slate-900 transition">Certifications</a>
-                <a href="#education" class="hover:text-slate-900 transition">Education</a>
-                <a href="#contact" class="hover:text-slate-900 transition">Contact</a>
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-medium text-slate-600 dark:text-slate-400 dark:text-slate-500 dark:text-slate-400 dark:text-slate-500">
+                <a href="#about" class="hover:text-slate-900 dark:text-white dark:hover:text-white transition">About</a>
+                <a href="#skills" class="hover:text-slate-900 dark:text-white dark:hover:text-white transition">Skills</a>
+                <a href="#experience" class="hover:text-slate-900 dark:text-white dark:hover:text-white transition">Experience</a>
+                <a href="#projects" class="hover:text-slate-900 dark:text-white dark:hover:text-white transition">Projects</a>
+                <a href="#certifications" class="hover:text-slate-900 dark:text-white dark:hover:text-white transition">Certifications</a>
+                <a href="#education" class="hover:text-slate-900 dark:text-white dark:hover:text-white transition">Education</a>
+                <a href="#contact" class="hover:text-slate-900 dark:text-white dark:hover:text-white transition">Contact</a>
+                <button id="darkToggle" onclick="toggleDark()" class="text-slate-600 dark:text-slate-400 dark:text-slate-500 dark:text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:text-white dark:hover:text-white transition" aria-label="Toggle dark mode">
+                    <i id="darkIcon" class="fa-solid fa-moon text-sm"></i>
+                </button>
             </nav>
 
             <!-- Mobile Menu Button -->
-            <button id="mobileMenuBtn" class="md:hidden text-slate-700 p-2" aria-label="Toggle Menu">
+            <button id="mobileMenuBtn" class="md:hidden text-slate-700 dark:text-slate-300 p-2" aria-label="Toggle Menu">
                 <i class="fa-solid fa-bars text-base"></i>
             </button>
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobileMenu" class="hidden md:hidden px-6 pb-6 pt-2 space-y-3 border-b border-slate-100 bg-white">
-            <a href="#about" class="block text-xs font-medium text-slate-700 hover:text-slate-900">About</a>
-            <a href="#skills" class="block text-xs font-medium text-slate-700 hover:text-slate-900">Skills</a>
-            <a href="#experience" class="block text-xs font-medium text-slate-700 hover:text-slate-900">Experience</a>
-            <a href="#projects" class="block text-xs font-medium text-slate-700 hover:text-slate-900">Projects</a>
-            <a href="#certifications" class="block text-xs font-medium text-slate-700 hover:text-slate-900">Certifications</a>
-            <a href="#education" class="block text-xs font-medium text-slate-700 hover:text-slate-900">Education</a>
-            <a href="#contact" class="block text-xs font-medium text-slate-700 hover:text-slate-900">Contact</a>
+        <div id="mobileMenu" class="hidden md:hidden px-6 pb-6 pt-2 space-y-3 border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+            <a href="#about" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white dark:hover:text-white">About</a>
+            <a href="#skills" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white dark:hover:text-white">Skills</a>
+            <a href="#experience" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white dark:hover:text-white">Experience</a>
+            <a href="#projects" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white dark:hover:text-white">Projects</a>
+            <a href="#certifications" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white dark:hover:text-white">Certifications</a>
+            <a href="#education" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white dark:hover:text-white">Education</a>
+            <a href="#contact" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white dark:hover:text-white">Contact</a>
+            <button onclick="toggleDark()" class="block text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:text-white dark:hover:text-white">
+                <i class="fa-solid fa-moon mr-1"></i> Toggle Dark Mode
+            </button>
         </div>
     </header>
 
@@ -60,44 +65,44 @@
     <section class="py-20 md:py-28 max-w-4xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
             <div class="md:col-span-8 space-y-6">
-                <div class="inline-flex items-center space-x-2 px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 text-[11px] font-medium">
+                <div class="inline-flex items-center space-x-2 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-[11px] font-medium">
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
                     <span>Available for Networking & IT Roles</span>
                 </div>
 
-                <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 leading-tight">
+                <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white leading-tight">
                     Carlo V. Garcia
                 </h1>
 
-                <p class="text-lg font-medium text-slate-600">
+                <p class="text-lg font-medium text-slate-600 dark:text-slate-400 dark:text-slate-500">
                     Future Network Engineer & Networking Specialist
                 </p>
 
-                <p class="text-slate-600 text-sm leading-relaxed max-w-xl">
+                <p class="text-slate-600 dark:text-slate-400 dark:text-slate-500 text-sm leading-relaxed max-w-xl">
                     Information Technology undergraduate specializing in Network Infrastructure, Routing & Switching, and Cybersecurity Protocols at Isabela State University. Focused on designing resilient enterprise networks and secure system architectures.
                 </p>
 
                 <div class="flex flex-wrap items-center gap-3 pt-2">
-                    <a href="#contact" class="px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-medium text-xs transition">
+                    <a href="#contact" class="px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-200 dark:text-slate-900 text-white font-medium text-xs transition">
                         Get in Touch
                     </a>
-                    <button onclick="downloadResume()" class="px-4 py-2 rounded-lg border border-slate-200 hover:bg-slate-50 text-slate-700 font-medium text-xs transition">
-                        <i class="fa-solid fa-download mr-1.5 text-slate-400"></i> Download Resume (PDF)
+                    <button onclick="downloadResume()" class="px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium text-xs transition">
+                        <i class="fa-solid fa-download mr-1.5 text-slate-400 dark:text-slate-500"></i> Download Resume (PDF)
                     </button>
                 </div>
 
-                <div class="flex items-center space-x-4 pt-2 text-slate-500 text-xs">
-                    <a href="https://www.linkedin.com/in/carlogarcia-sample" target="_blank" class="hover:text-slate-900 transition"><i class="fa-brands fa-linkedin mr-1"></i> LinkedIn</a>
+                <div class="flex items-center space-x-4 pt-2 text-slate-500 dark:text-slate-400 dark:text-slate-500 text-xs">
+                    <a href="https://www.linkedin.com/in/carlogarcia-sample" target="_blank" class="hover:text-slate-900 dark:text-white transition"><i class="fa-brands fa-linkedin mr-1"></i> LinkedIn</a>
                     <span>·</span>
-                    <a href="https://github.com/carlogarcia-dev" target="_blank" class="hover:text-slate-900 transition"><i class="fa-brands fa-github mr-1"></i> GitHub</a>
+                    <a href="https://github.com/carlogarcia-dev" target="_blank" class="hover:text-slate-900 dark:text-white transition"><i class="fa-brands fa-github mr-1"></i> GitHub</a>
                     <span>·</span>
-                    <a href="mailto:carlogarcia120823@gmail.com" class="hover:text-slate-900 transition"><i class="fa-solid fa-envelope mr-1"></i> Email</a>
+                    <a href="mailto:carlogarcia120823@gmail.com" class="hover:text-slate-900 dark:text-white transition"><i class="fa-solid fa-envelope mr-1"></i> Email</a>
                 </div>
             </div>
 
             <!-- Profile Photograph -->
             <div class="md:col-span-4 flex justify-center">
-                <div class="w-48 h-48 md:w-56 md:h-56 rounded-xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm">
+                <div class="w-48 h-48 md:w-56 md:h-56 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 shadow-sm">
                     <img src="assets/profile.jpg" alt="Carlo Garcia Professional Photograph" class="w-full h-full object-cover object-top">
                 </div>
             </div>
@@ -105,32 +110,32 @@
     </section>
 
     <!-- About & Profile Section -->
-    <section id="about" class="py-16 border-t border-slate-100 bg-slate-50/50">
+    <section id="about" class="py-16 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
         <div class="max-w-4xl mx-auto px-6 space-y-8">
             <div class="space-y-1">
-                <h2 class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Profile Overview</h2>
-                <h3 class="text-xl font-bold text-slate-900">About Me & Career Objectives</h3>
+                <h2 class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Profile Overview</h2>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">About Me & Career Objectives</h3>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm space-y-3">
-                    <h4 class="font-semibold text-slate-900 text-sm flex items-center">
-                        <i class="fa-solid fa-bullseye text-slate-700 mr-2"></i> Career Objectives
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700/80 shadow-sm space-y-3">
+                    <h4 class="font-semibold text-slate-900 dark:text-white text-sm flex items-center">
+                        <i class="fa-solid fa-bullseye text-slate-700 dark:text-slate-300 mr-2"></i> Career Objectives
                     </h4>
-                    <p class="text-slate-600 text-xs leading-relaxed">
+                    <p class="text-slate-600 dark:text-slate-400 dark:text-slate-500 text-xs leading-relaxed">
                         To secure a position as a Junior Network Engineer or Systems Administrator where I can utilize my expertise in Cisco routing, network segmentation, and security hardening to maintain reliable, secure enterprise networks.
                     </p>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm space-y-3">
-                    <h4 class="font-semibold text-slate-900 text-sm flex items-center">
-                        <i class="fa-solid fa-compass text-slate-700 mr-2"></i> Areas of Interest in IT
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700/80 shadow-sm space-y-3">
+                    <h4 class="font-semibold text-slate-900 dark:text-white text-sm flex items-center">
+                        <i class="fa-solid fa-compass text-slate-700 dark:text-slate-300 mr-2"></i> Areas of Interest in IT
                     </h4>
                     <div class="flex flex-wrap gap-1.5 pt-1">
-                        <span class="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-[11px] font-medium">Enterprise Routing & Switching</span>
-                        <span class="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-[11px] font-medium">Network Security & Firewalls</span>
-                        <span class="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-[11px] font-medium">VLAN & Subnet Architecture</span>
-                        <span class="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-[11px] font-medium">Cybersecurity Protocols</span>
+                        <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-[11px] font-medium">Enterprise Routing & Switching</span>
+                        <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-[11px] font-medium">Network Security & Firewalls</span>
+                        <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-[11px] font-medium">VLAN & Subnet Architecture</span>
+                        <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-[11px] font-medium">Cybersecurity Protocols</span>
                     </div>
                 </div>
             </div>
@@ -138,62 +143,62 @@
     </section>
 
     <!-- Skills Section (Networking & Security Only, No Percentages) -->
-    <section id="skills" class="py-16 border-t border-slate-100">
+    <section id="skills" class="py-16 border-t border-slate-100 dark:border-slate-800">
         <div class="max-w-4xl mx-auto px-6 space-y-8">
             <div class="space-y-1">
-                <h2 class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Competencies</h2>
-                <h3 class="text-xl font-bold text-slate-900">Technical & Professional Skills</h3>
+                <h2 class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Competencies</h2>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Technical & Professional Skills</h3>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Technical Skills: Networking & Security Only -->
-                <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm space-y-4">
-                    <h4 class="font-semibold text-slate-900 text-sm pb-2 border-b border-slate-100 flex items-center">
-                        <i class="fa-solid fa-network-wired text-slate-700 mr-2"></i> Technical Skills (Networking & Security)
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700/80 shadow-sm space-y-4">
+                    <h4 class="font-semibold text-slate-900 dark:text-white text-sm pb-2 border-b border-slate-100 dark:border-slate-800 flex items-center">
+                        <i class="fa-solid fa-network-wired text-slate-700 dark:text-slate-300 mr-2"></i> Technical Skills (Networking & Security)
                     </h4>
                     
-                    <div class="grid grid-cols-1 gap-2.5 text-xs text-slate-700 font-medium">
-                        <div class="p-2.5 rounded bg-slate-50 border border-slate-100 flex items-center">
+                    <div class="grid grid-cols-1 gap-2.5 text-xs text-slate-700 dark:text-slate-300 font-medium">
+                        <div class="p-2.5 rounded bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-800 flex items-center">
                             <span>Cisco Routing & Switching</span>
                         </div>
-                        <div class="p-2.5 rounded bg-slate-50 border border-slate-100 flex items-center">
+                        <div class="p-2.5 rounded bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-800 flex items-center">
                             <span>VLAN Configuration & Trunking (802.1Q)</span>
                         </div>
-                        <div class="p-2.5 rounded bg-slate-50 border border-slate-100 flex items-center">
+                        <div class="p-2.5 rounded bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-800 flex items-center">
                             <span>IPv4/IPv6 Subnetting & CIDR</span>
                         </div>
-                        <div class="p-2.5 rounded bg-slate-50 border border-slate-100 flex items-center">
+                        <div class="p-2.5 rounded bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-800 flex items-center">
                             <span>Network Security & Access Control Lists (ACLs)</span>
                         </div>
-                        <div class="p-2.5 rounded bg-slate-50 border border-slate-100 flex items-center">
+                        <div class="p-2.5 rounded bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-800 flex items-center">
                             <span>Firewall Configuration & Packet Analysis</span>
                         </div>
-                        <div class="p-2.5 rounded bg-slate-50 border border-slate-100 flex items-center">
+                        <div class="p-2.5 rounded bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-800 flex items-center">
                             <span>Cybersecurity Principles & Hardening</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Professional Skills -->
-                <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm space-y-4">
-                    <h4 class="font-semibold text-slate-900 text-sm pb-2 border-b border-slate-100 flex items-center">
-                        <i class="fa-solid fa-user-tie text-slate-700 mr-2"></i> Professional Skills
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700/80 shadow-sm space-y-4">
+                    <h4 class="font-semibold text-slate-900 dark:text-white text-sm pb-2 border-b border-slate-100 dark:border-slate-800 flex items-center">
+                        <i class="fa-solid fa-user-tie text-slate-700 dark:text-slate-300 mr-2"></i> Professional Skills
                     </h4>
 
-                    <div class="grid grid-cols-1 gap-2.5 text-xs text-slate-700 font-medium">
-                        <div class="p-2.5 rounded bg-slate-50 border border-slate-100 flex items-center">
+                    <div class="grid grid-cols-1 gap-2.5 text-xs text-slate-700 dark:text-slate-300 font-medium">
+                        <div class="p-2.5 rounded bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-800 flex items-center">
                             <span>Communication & Technical Documentation</span>
                         </div>
-                        <div class="p-2.5 rounded bg-slate-50 border border-slate-100 flex items-center">
+                        <div class="p-2.5 rounded bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-800 flex items-center">
                             <span>Leadership & Team Collaboration</span>
                         </div>
-                        <div class="p-2.5 rounded bg-slate-50 border border-slate-100 flex items-center">
+                        <div class="p-2.5 rounded bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-800 flex items-center">
                             <span>Problem Solving & Root Cause Analysis</span>
                         </div>
-                        <div class="p-2.5 rounded bg-slate-50 border border-slate-100 flex items-center">
+                        <div class="p-2.5 rounded bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-800 flex items-center">
                             <span>Critical Thinking under Network Outages</span>
                         </div>
-                        <div class="p-2.5 rounded bg-slate-50 border border-slate-100 flex items-center">
+                        <div class="p-2.5 rounded bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-800 flex items-center">
                             <span>Project Management & Time Management</span>
                         </div>
                     </div>
@@ -203,27 +208,27 @@
     </section>
 <!--
     <!-- Experience Section 
-    <section id="experience" class="py-16 border-t border-slate-100 bg-slate-50/50">
+    <section id="experience" class="py-16 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
         <div class="max-w-4xl mx-auto px-6 space-y-8">
             <div class="space-y-1">
-                <h2 class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Career History</h2>
-                <h3 class="text-xl font-bold text-slate-900">Work Experience, Internships & Volunteering</h3>
+                <h2 class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Career History</h2>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Work Experience, Internships & Volunteering</h3>
             </div>
 
             <div class="space-y-6">
                 <!-- Exp 1 
-                <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm space-y-3">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700/80 shadow-sm space-y-3">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                         <div>
-                            <span class="text-[10px] font-semibold uppercase text-slate-400">Work Experience / OJT</span>
-                            <h4 class="font-bold text-slate-900 text-sm mt-0.5">Network Operations Intern</h4>
-                            <p class="text-slate-600 text-xs">Enterprise IT Solutions • Regional Hub</p>
+                            <span class="text-[10px] font-semibold uppercase text-slate-400 dark:text-slate-500">Work Experience / OJT</span>
+                            <h4 class="font-bold text-slate-900 dark:text-white text-sm mt-0.5">Network Operations Intern</h4>
+                            <p class="text-slate-600 dark:text-slate-400 dark:text-slate-500 text-xs">Enterprise IT Solutions • Regional Hub</p>
                         </div>
-                        <span class="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-[11px] font-medium self-start sm:self-auto">
+                        <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-[11px] font-medium self-start sm:self-auto">
                             Jun 2025 – Dec 2025
                         </span>
                     </div>
-                    <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-xs leading-relaxed">
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-600 dark:text-slate-400 dark:text-slate-500 text-xs leading-relaxed">
                         <li>Assisted senior network engineers in configuring Cisco routers, switches, and structured cabling for branch offices.</li>
                         <li>Configured and verified VLAN segmentation and inter-VLAN routing to optimize broadcast domain efficiency.</li>
                         <li>Monitored network traffic logs and implemented firewall security rules to mitigate unauthorized access attempts.</li>
@@ -234,36 +239,36 @@
     </section>
 -->
     <!-- Projects Section -->
-    <section id="projects" class="py-16 border-t border-slate-100">
+    <section id="projects" class="py-16 border-t border-slate-100 dark:border-slate-800">
         <div class="max-w-4xl mx-auto px-6 space-y-8">
             <div class="space-y-1">
-                <h2 class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Portfolio</h2>
-                <h3 class="text-xl font-bold text-slate-900">Featured Networking & Security Projects</h3>
+                <h2 class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Portfolio</h2>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Featured Networking & Security Projects</h3>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Project 1 -->
-                <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm flex flex-col justify-between overflow-hidden">
+                <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700/80 shadow-sm flex flex-col justify-between overflow-hidden">
                     <div class="p-5 space-y-3">
                         <div class="flex items-center justify-between">
-                            <span class="text-[10px] font-semibold uppercase text-slate-400">Capstone Project</span>
-                            <span class="text-[11px] text-slate-400">2026</span>
+                            <span class="text-[10px] font-semibold uppercase text-slate-400 dark:text-slate-500">Capstone Project</span>
+                            <span class="text-[11px] text-slate-400 dark:text-slate-500">2026</span>
                         </div>
-                        <h4 class="font-bold text-slate-900 text-sm">Cashier Registry Check System</h4>
-                        <p class="text-[11px] font-medium text-slate-500">Role:Member</p>
-                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3">
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm">Cashier Registry Check System</h4>
+                        <p class="text-[11px] font-medium text-slate-500 dark:text-slate-400 dark:text-slate-500">Role:Member</p>
+                        <p class="text-slate-600 dark:text-slate-400 dark:text-slate-500 text-xs leading-relaxed line-clamp-3">
                             Automating the Cashier Registry process.
                         </p>
                         <div class="flex flex-wrap gap-1 pt-1">
-                            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 text-[10px] font-medium">Python</span>
-                            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 text-[10px] font-medium">VS Code</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 dark:text-slate-500 text-[10px] font-medium">Python</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 dark:text-slate-500 text-[10px] font-medium">VS Code</span>
                         </div>
                     </div>
-                   <!-- <div class="p-5 pt-0 border-t border-slate-100 mt-3 flex items-center justify-between">
-                        <button onclick="openProjectModal('Enterprise VLAN & Inter-VLAN Routing', 'Network Designer & Engineer', 'A comprehensive network simulation project modeling a 3-building corporate network with segmented VLANs (HR, Finance, Engineering) communicating securely via a centralized Layer 3 switch.', ['Cisco Catalyst Switches & Routers', '802.1Q VLAN Trunking Protocols', 'OSPF Dynamic Routing Protocol'], ['Configured subinterfaces and router-on-a-stick architecture', 'Tested failover mechanisms and redundancy', 'Authored full network topology documentation'], 'assets/shot-vlan-topology.jpg', 'assets/shot-vlan-cli.jpg')" class="text-xs font-semibold text-slate-900 hover:underline">
+                   <!-- <div class="p-5 pt-0 border-t border-slate-100 dark:border-slate-800 mt-3 flex items-center justify-between">
+                        <button onclick="openProjectModal('Enterprise VLAN & Inter-VLAN Routing', 'Network Designer & Engineer', 'A comprehensive network simulation project modeling a 3-building corporate network with segmented VLANs (HR, Finance, Engineering) communicating securely via a centralized Layer 3 switch.', ['Cisco Catalyst Switches & Routers', '802.1Q VLAN Trunking Protocols', 'OSPF Dynamic Routing Protocol'], ['Configured subinterfaces and router-on-a-stick architecture', 'Tested failover mechanisms and redundancy', 'Authored full network topology documentation'], 'assets/shot-vlan-topology.jpg', 'assets/shot-vlan-cli.jpg')" class="text-xs font-semibold text-slate-900 dark:text-white hover:underline">
                             View Details <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i>
                         </button>
-                        <a href="https://github.com/carlogarcia-dev/vlan-lab" target="_blank" class="text-slate-400 hover:text-slate-700 text-xs"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://github.com/carlogarcia-dev/vlan-lab" target="_blank" class="text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:text-slate-300 text-xs"><i class="fa-brands fa-github"></i></a>
                     </div>-->
                 </div>
             </div>
@@ -271,11 +276,11 @@
     </section>
 
     <!-- Certifications & Eligibility Section -->
-    <section id="certifications" class="py-16 border-t border-slate-100 bg-slate-50/50">
+    <section id="certifications" class="py-16 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
         <div class="max-w-4xl mx-auto px-6 space-y-8">
             <div class="space-y-1">
-                <h2 class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Credentials</h2>
-                <h3 class="text-xl font-bold text-slate-900">Eligibility, IT Certifications & Training</h3>
+                <h2 class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Credentials</h2>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Eligibility, IT Certifications & Training</h3>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="certGrid">
@@ -283,47 +288,47 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-16 border-t border-slate-100">
+    <section id="education" class="py-16 border-t border-slate-100 dark:border-slate-800">
         <div class="max-w-4xl mx-auto px-6 space-y-8">
             <div class="space-y-1">
-                <h2 class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Education</h2>
-                <h3 class="text-xl font-bold text-slate-900">Academic Background</h3>
+                <h2 class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Education</h2>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Academic Background</h3>
             </div>
 
             <div class="space-y-4">
                 <!-- Tertiary -->
-                <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700/80 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div class="space-y-1">
-                        <span class="text-[10px] font-semibold uppercase text-slate-400">Tertiary Education</span>
-                        <h4 class="font-bold text-slate-900 text-sm">Bachelor of Science in Information Technology (BSIT)</h4>
-                        <p class="text-slate-600 text-xs">Isabela State University • Specialization in Networking</p>
+                        <span class="text-[10px] font-semibold uppercase text-slate-400 dark:text-slate-500">Tertiary Education</span>
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm">Bachelor of Science in Information Technology (BSIT)</h4>
+                        <p class="text-slate-600 dark:text-slate-400 dark:text-slate-500 text-xs">Isabela State University • Specialization in Networking</p>
                         <p class="text-[11px] font-medium text-emerald-600 pt-0.5">Expected Graduation: 2027</p>
                     </div>
-                    <span class="px-3 py-1.5 rounded bg-slate-100 text-slate-700 text-xs font-semibold self-start sm:self-auto">
+                    <span class="px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold self-start sm:self-auto">
                         2023 – 2027
                     </span>
                 </div>
 
                 <!-- Secondary -->
-                <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700/80 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div class="space-y-1">
-                        <span class="text-[10px] font-semibold uppercase text-slate-400">Secondary Education</span>
-                        <h4 class="font-bold text-slate-900 text-sm">Senior High School (General Academic Strand)</h4>
-                        <p class="text-slate-600 text-xs">Cauayan City National High School Research Annex</p>
+                        <span class="text-[10px] font-semibold uppercase text-slate-400 dark:text-slate-500">Secondary Education</span>
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm">Senior High School (General Academic Strand)</h4>
+                        <p class="text-slate-600 dark:text-slate-400 dark:text-slate-500 text-xs">Cauayan City National High School Research Annex</p>
                     </div>
-                    <span class="px-3 py-1.5 rounded bg-slate-100 text-slate-700 text-xs font-semibold self-start sm:self-auto">
+                    <span class="px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold self-start sm:self-auto">
                         2021 – 2022
                     </span>
                 </div>
 
                 <!-- Elementary -->
-                <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700/80 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div class="space-y-1">
-                        <span class="text-[10px] font-semibold uppercase text-slate-400">Elementary Education</span>
-                        <h4 class="font-bold text-slate-900 text-sm">San Francisco Elementary School</h4>
-                        <p class="text-slate-600 text-xs">San Francisco, Cauayan City, Isabela</p>
+                        <span class="text-[10px] font-semibold uppercase text-slate-400 dark:text-slate-500">Elementary Education</span>
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm">San Francisco Elementary School</h4>
+                        <p class="text-slate-600 dark:text-slate-400 dark:text-slate-500 text-xs">San Francisco, Cauayan City, Isabela</p>
                     </div>
-                    <span class="px-3 py-1.5 rounded bg-slate-100 text-slate-700 text-xs font-semibold self-start sm:self-auto">
+                    <span class="px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold self-start sm:self-auto">
                         2014 – 2015
                     </span>
                 </div>
@@ -332,39 +337,39 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 border-t border-slate-100 bg-slate-50/50">
+    <section id="contact" class="py-16 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
         <div class="max-w-4xl mx-auto px-6 space-y-8">
             <div class="space-y-1">
-                <h2 class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Contact</h2>
-                <h3 class="text-xl font-bold text-slate-900">Get in Touch</h3>
+                <h2 class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Contact</h2>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Get in Touch</h3>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
                 <!-- Info -->
                 <div class="md:col-span-5 space-y-4">
-                    <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm space-y-4">
-                        <h4 class="font-bold text-slate-900 text-sm">Contact Information</h4>
-                        <div class="space-y-2.5 text-xs text-slate-600">
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700/80 shadow-sm space-y-4">
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm">Contact Information</h4>
+                        <div class="space-y-2.5 text-xs text-slate-600 dark:text-slate-400 dark:text-slate-500">
                             <div class="flex items-center space-x-3">
-                                <i class="fa-solid fa-envelope text-slate-400 w-4"></i>
+                                <i class="fa-solid fa-envelope text-slate-400 dark:text-slate-500 w-4"></i>
                                 <span>carlogarcia120823@gmail.com</span>
                             </div>
                             <div class="flex items-center space-x-3">
-                                <i class="fa-solid fa-location-dot text-slate-400 w-4"></i>
+                                <i class="fa-solid fa-location-dot text-slate-400 dark:text-slate-500 w-4"></i>
                                 <span>San Francisco, Cauayan City, Isabela</span>
                             </div>
                         </div>
 
-                        <div class="pt-3 border-t border-slate-100 flex space-x-4 text-xs">
-                            <a href="https://www.linkedin.com/in/carlogarcia-sample" target="_blank" class="text-slate-600 hover:text-slate-900 font-medium"><i class="fa-brands fa-linkedin mr-1"></i> LinkedIn</a>
-                            <a href="https://github.com/carlogarcia-dev" target="_blank" class="text-slate-600 hover:text-slate-900 font-medium"><i class="fa-brands fa-github mr-1"></i> GitHub</a>
+                        <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex space-x-4 text-xs">
+                            <a href="https://www.linkedin.com/in/carlogarcia-sample" target="_blank" class="text-slate-600 dark:text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:text-white font-medium"><i class="fa-brands fa-linkedin mr-1"></i> LinkedIn</a>
+                            <a href="https://github.com/carlogarcia-dev" target="_blank" class="text-slate-600 dark:text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:text-white font-medium"><i class="fa-brands fa-github mr-1"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Form -->
                 <div class="md:col-span-7">
-                    <form id="contactForm" action="https://formspree.io/f/mljglzro" method="POST" class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm space-y-3.5">
+                    <form id="contactForm" action="https://formspree.io/f/mljglzro" method="POST" class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700/80 shadow-sm space-y-3.5">
                         <input type="hidden" name="_next" value="https://carlogarcia.online/?sent=1">
                         <input type="hidden" name="_subject" value="New message from carlogarcia.online">
                         <div id="formSuccessAlert" class="hidden p-3 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-medium flex items-center space-x-2">
@@ -374,26 +379,26 @@
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                             <div class="space-y-1">
-                                <label class="text-[11px] font-semibold text-slate-700">Your Name</label>
-                                <input type="text" id="senderName" required class="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-slate-900 focus:outline-none text-xs" placeholder="Juan Dela Cruz">
+                                <label class="text-[11px] font-semibold text-slate-700 dark:text-slate-300">Your Name</label>
+                                <input type="text" id="senderName" required class="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-slate-900 focus:outline-none text-xs" placeholder="Juan Dela Cruz">
                             </div>
                             <div class="space-y-1">
-                                <label class="text-[11px] font-semibold text-slate-700">Email Address</label>
-                                <input type="email" id="senderEmail" required class="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-slate-900 focus:outline-none text-xs" placeholder="juan@example.com">
+                                <label class="text-[11px] font-semibold text-slate-700 dark:text-slate-300">Email Address</label>
+                                <input type="email" id="senderEmail" required class="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-slate-900 focus:outline-none text-xs" placeholder="juan@example.com">
                             </div>
                         </div>
 
                         <div class="space-y-1">
-                            <label class="text-[11px] font-semibold text-slate-700">Subject</label>
-                            <input type="text" id="senderSubject" required class="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-slate-900 focus:outline-none text-xs" placeholder="Network Engineering Inquiry">
+                            <label class="text-[11px] font-semibold text-slate-700 dark:text-slate-300">Subject</label>
+                            <input type="text" id="senderSubject" required class="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-slate-900 focus:outline-none text-xs" placeholder="Network Engineering Inquiry">
                         </div>
 
                         <div class="space-y-1">
-                            <label class="text-[11px] font-semibold text-slate-700">Message</label>
-                            <textarea id="senderMessage" rows="3" required class="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-slate-900 focus:outline-none text-xs" placeholder="Type your message here..."></textarea>
+                            <label class="text-[11px] font-semibold text-slate-700 dark:text-slate-300">Message</label>
+                            <textarea id="senderMessage" rows="3" required class="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-slate-900 focus:outline-none text-xs" placeholder="Type your message here..."></textarea>
                         </div>
 
-                        <button type="submit" class="w-full py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs transition">
+                        <button type="submit" class="w-full py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-200 dark:text-slate-900 text-white dark:text-slate-900 font-semibold text-xs transition">
                             Send Message
                         </button>
                     </form>
@@ -403,132 +408,132 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-slate-100 py-6 text-center text-[11px] text-slate-400">
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 py-6 text-center text-[11px] text-slate-400 dark:text-slate-500">
         <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
             <p>© 2026 Carlo Garcia • carlogarcia.online. All rights reserved.</p>
-            <a href="#" class="hover:text-slate-900 transition">Back to top <i class="fa-solid fa-arrow-up ml-1"></i></a>
+            <a href="#" class="hover:text-slate-900 dark:text-white transition">Back to top <i class="fa-solid fa-arrow-up ml-1"></i></a>
         </div>
     </footer>
 
     <!-- Project Details Modal -->
     <div id="projectModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl max-w-lg w-full p-6 border border-slate-200 shadow-xl relative space-y-4 max-h-[90vh] overflow-y-auto">
-            <button onclick="closeProjectModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700">
+        <div class="bg-white dark:bg-slate-900 rounded-xl max-w-lg w-full p-6 border border-slate-200 dark:border-slate-700 shadow-xl relative space-y-4 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeProjectModal()" class="absolute top-5 right-5 text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:text-slate-300">
                 <i class="fa-solid fa-xmark text-base"></i>
             </button>
 
             <div class="space-y-1 pr-6">
-                <span id="modalProjectRole" class="text-[10px] font-semibold uppercase text-slate-400"></span>
-                <h3 id="modalProjectTitle" class="text-lg font-bold text-slate-900"></h3>
+                <span id="modalProjectRole" class="text-[10px] font-semibold uppercase text-slate-400 dark:text-slate-500"></span>
+                <h3 id="modalProjectTitle" class="text-lg font-bold text-slate-900 dark:text-white"></h3>
             </div>
 
-            <div class="space-y-3 text-xs text-slate-600">
+            <div class="space-y-3 text-xs text-slate-600 dark:text-slate-400 dark:text-slate-500">
                 <div>
-                    <h4 class="font-semibold text-slate-900 mb-0.5">Project Overview</h4>
+                    <h4 class="font-semibold text-slate-900 dark:text-white mb-0.5">Project Overview</h4>
                     <p id="modalProjectDesc" class="leading-relaxed"></p>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-slate-900 mb-1">Technologies & Protocols</h4>
+                    <h4 class="font-semibold text-slate-900 dark:text-white mb-1">Technologies & Protocols</h4>
                     <ul id="modalProjectTech" class="list-disc list-inside space-y-0.5"></ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-slate-900 mb-1">Key Contributions</h4>
+                    <h4 class="font-semibold text-slate-900 dark:text-white mb-1">Key Contributions</h4>
                     <ul id="modalProjectContrib" class="list-disc list-inside space-y-0.5"></ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-slate-900 mb-1.5">Screenshots / Topology</h4>
+                    <h4 class="font-semibold text-slate-900 dark:text-white mb-1.5">Screenshots / Topology</h4>
                     <div class="grid grid-cols-2 gap-2">
-                        <img id="modalImg1" src="" alt="Screenshot 1" class="rounded border border-slate-200 aspect-video object-cover">
-                        <img id="modalImg2" src="" alt="Screenshot 2" class="rounded border border-slate-200 aspect-video object-cover">
+                        <img id="modalImg1" src="" alt="Screenshot 1" class="rounded border border-slate-200 dark:border-slate-700 aspect-video object-cover">
+                        <img id="modalImg2" src="" alt="Screenshot 2" class="rounded border border-slate-200 dark:border-slate-700 aspect-video object-cover">
                     </div>
                 </div>
             </div>
 
-            <div class="pt-3 border-t border-slate-100 flex justify-end">
-                <button onclick="closeProjectModal()" class="px-3.5 py-1.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition">Close</button>
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex justify-end">
+                <button onclick="closeProjectModal()" class="px-3.5 py-1.5 rounded bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-300 font-semibold text-xs transition">Close</button>
             </div>
         </div>
     </div>
 
     <!-- Certificate Image Modal -->
     <div id="certImageModal" class="fixed inset-0 z-50 hidden bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl max-w-3xl w-full border border-slate-200 shadow-xl relative max-h-[90vh] overflow-y-auto">
-            <div class="sticky top-0 bg-white border-b border-slate-100 px-5 py-3.5 flex items-center justify-between rounded-t-xl">
+        <div class="bg-white dark:bg-slate-900 rounded-xl max-w-3xl w-full border border-slate-200 dark:border-slate-700 shadow-xl relative max-h-[90vh] overflow-y-auto">
+            <div class="sticky top-0 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 px-5 py-3.5 flex items-center justify-between rounded-t-xl">
                 <div class="pr-8">
-                    <h4 id="certModalTitle" class="font-bold text-slate-900 text-sm leading-tight"></h4>
-                    <p id="certModalSubtitle" class="text-[11px] text-slate-500 mt-0.5"></p>
+                    <h4 id="certModalTitle" class="font-bold text-slate-900 dark:text-white text-sm leading-tight"></h4>
+                    <p id="certModalSubtitle" class="text-[11px] text-slate-500 dark:text-slate-400 dark:text-slate-500 mt-0.5"></p>
                 </div>
-                <button onclick="closeCertModal()" class="text-slate-400 hover:text-slate-700 absolute top-3.5 right-5">
+                <button onclick="closeCertModal()" class="text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:text-slate-300 absolute top-3.5 right-5">
                     <i class="fa-solid fa-xmark text-base"></i>
                 </button>
             </div>
-            <div class="p-4 bg-slate-50">
-                <img id="certModalImg" src="" alt="Certificate Image" class="w-full rounded border border-slate-200 bg-white">
+            <div class="p-4 bg-slate-50 dark:bg-slate-800">
+                <img id="certModalImg" src="" alt="Certificate Image" class="w-full rounded border border-slate-200 dark:border-slate-700 bg-white">
             </div>
-            <div class="px-5 py-3 border-t border-slate-100 flex justify-end">
-                <button onclick="closeCertModal()" class="px-3.5 py-1.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition">Close</button>
+            <div class="px-5 py-3 border-t border-slate-100 dark:border-slate-800 flex justify-end">
+                <button onclick="closeCertModal()" class="px-3.5 py-1.5 rounded bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-300 font-semibold text-xs transition">Close</button>
             </div>
         </div>
     </div>
 
     <!-- Verification Modal -->
     <div id="verificationModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl max-w-sm w-full p-6 border border-slate-200 shadow-xl relative space-y-4 text-center">
-            <button onclick="closeVerificationModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700">
+        <div class="bg-white dark:bg-slate-900 rounded-xl max-w-sm w-full p-6 border border-slate-200 dark:border-slate-700 shadow-xl relative space-y-4 text-center">
+            <button onclick="closeVerificationModal()" class="absolute top-4 right-4 text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:text-slate-300">
                 <i class="fa-solid fa-xmark text-base"></i>
             </button>
             <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-base mx-auto">
                 <i class="fa-solid fa-shield-check"></i>
             </div>
             <div class="space-y-0.5">
-                <h3 class="font-bold text-slate-900 text-sm">Registry Verification</h3>
-                <p class="text-[11px] text-slate-400">Official credential record verified</p>
+                <h3 class="font-bold text-slate-900 dark:text-white text-sm">Registry Verification</h3>
+                <p class="text-[11px] text-slate-400 dark:text-slate-500">Official credential record verified</p>
             </div>
-            <div class="bg-slate-50 p-3 rounded-lg text-left text-[11px] space-y-1.5 border border-slate-100">
-                <div class="flex justify-between"><span class="text-slate-400">Title:</span> <span id="verTitle" class="font-semibold text-slate-800 text-right"></span></div>
-                <div class="flex justify-between"><span class="text-slate-400">Issuer:</span> <span id="verIssuer" class="font-semibold text-slate-800 text-right"></span></div>
-                <div class="flex justify-between"><span class="text-slate-400">Date:</span> <span id="verDate" class="font-semibold text-slate-800 text-right"></span></div>
-                <div class="flex justify-between"><span class="text-slate-400">ID:</span> <span id="verId" class="font-mono font-bold text-slate-900 text-right"></span></div>
+            <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg text-left text-[11px] space-y-1.5 border border-slate-100 dark:border-slate-800">
+                <div class="flex justify-between"><span class="text-slate-400 dark:text-slate-500">Title:</span> <span id="verTitle" class="font-semibold text-slate-800 dark:text-slate-100 text-right"></span></div>
+                <div class="flex justify-between"><span class="text-slate-400 dark:text-slate-500">Issuer:</span> <span id="verIssuer" class="font-semibold text-slate-800 dark:text-slate-100 text-right"></span></div>
+                <div class="flex justify-between"><span class="text-slate-400 dark:text-slate-500">Date:</span> <span id="verDate" class="font-semibold text-slate-800 dark:text-slate-100 text-right"></span></div>
+                <div class="flex justify-between"><span class="text-slate-400 dark:text-slate-500">ID:</span> <span id="verId" class="font-mono font-bold text-slate-900 dark:text-white text-right"></span></div>
             </div>
-            <button onclick="closeVerificationModal()" class="w-full py-2 rounded bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs transition">Close</button>
+            <button onclick="closeVerificationModal()" class="w-full py-2 rounded bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-200 dark:text-slate-900 text-white font-semibold text-xs transition">Close</button>
         </div>
     </div>
 
     <!-- Paywall Overlay (blurs the whole portfolio until payment is verified) -->
-    <div id="paywall" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-white/75 backdrop-blur-[28px] overflow-hidden">
-        <div class="bg-white/95 border border-slate-200 rounded-3xl shadow-2xl max-w-md w-full p-7 sm:p-9 text-center">
-            <div class="w-14 h-14 mx-auto rounded-2xl bg-slate-100 text-slate-700 flex items-center justify-center text-2xl mb-5">
+    <div id="paywall" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-white dark:bg-slate-900/75 backdrop-blur-[28px] overflow-hidden">
+        <div class="bg-white/95 dark:bg-slate-900/95 border border-slate-200 dark:border-slate-700 rounded-3xl shadow-2xl max-w-md w-full p-7 sm:p-9 text-center">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center text-2xl mb-5">
                 <i class="fa-solid fa-lock"></i>
             </div>
-            <span class="text-[11px] font-bold bg-slate-100 text-slate-700 px-3 py-1 rounded-full uppercase tracking-wider">Payment Required</span>
-            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3">This Portfolio Is Locked</h3>
-            <p class="text-sm text-slate-500 mt-3 leading-relaxed">
+            <span class="text-[11px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full uppercase tracking-wider">Payment Required</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-3">This Portfolio Is Locked</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 dark:text-slate-500 mt-3 leading-relaxed">
                 The portfolio is locked until the payment is completed. Enter the email address you paid with — you'll sign in to PayContract and, once your payment is verified, come straight back here unlocked.
             </p>
 
-            <label for="paywall-email" class="block text-left text-[11px] font-bold text-slate-400 uppercase tracking-wider mt-6 mb-2">Email address used for payment</label>
+            <label for="paywall-email" class="block text-left text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mt-6 mb-2">Email address used for payment</label>
             <input id="paywall-email" type="email" placeholder="you@example.com" autocomplete="email" spellcheck="false"
-                class="w-full rounded-xl bg-white border border-slate-200 focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition" />
+                class="w-full rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 outline-none transition" />
 
             <button id="paywall-continue" type="button"
-                class="mt-3 w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 disabled:opacity-60 text-white font-bold py-3.5 rounded-xl shadow-lg transition transform active:scale-95">
+                class="mt-3 w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-200 dark:text-slate-900 disabled:opacity-60 text-white font-bold py-3.5 rounded-xl shadow-lg transition transform active:scale-95">
                 <span>Sign in to Unlock</span>
                 <i class="fa-solid fa-arrow-right text-xs"></i>
             </button>
 
             <button id="paywall-subscribe" type="button"
-                class="mt-3 w-full inline-flex items-center justify-center gap-2 border border-slate-200 hover:border-slate-900 hover:text-slate-900 text-slate-600 font-bold py-3.5 rounded-xl transition">
+                class="mt-3 w-full inline-flex items-center justify-center gap-2 border border-slate-200 dark:border-slate-700 hover:border-slate-900 hover:text-slate-900 dark:text-white text-slate-600 dark:text-slate-400 dark:text-slate-500 font-bold py-3.5 rounded-xl transition">
                 <i class="fa-solid fa-bolt text-xs"></i>
                 <span>Subscribe for early access</span>
             </button>
 
             <p id="paywall-error" class="hidden text-xs font-semibold text-red-600 bg-red-50 border border-red-200 rounded-lg px-3 py-2 mt-3 text-left"></p>
 
-            <p id="paywall-status" class="text-xs text-slate-400 mt-5 inline-flex items-center justify-center space-x-2">
+            <p id="paywall-status" class="text-xs text-slate-400 dark:text-slate-500 mt-5 inline-flex items-center justify-center space-x-2">
                 <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
                 <span id="paywall-status-text">Waiting for payment confirmation…</span>
             </p>
-            <p class="text-[11px] text-slate-400 mt-3 leading-relaxed">Access is saved on each device after your payment is verified — sign in once per browser you use.</p>
+            <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-3 leading-relaxed">Access is saved on each device after your payment is verified — sign in once per browser you use.</p>
         </div>
     </div>
 
@@ -884,16 +889,16 @@
             const grid = document.getElementById('certGrid');
             if (!grid) return;
             grid.innerHTML = CERTS.map((c, i) => `
-                <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-4">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700/80 shadow-sm flex flex-col justify-between space-y-4">
                     <div class="space-y-1.5">
-                        <span class="text-[10px] font-semibold uppercase text-slate-400">${c.cat}</span>
-                        <h4 class="font-bold text-slate-900 text-sm">${c.title}</h4>
-                        <p class="text-xs text-slate-500">${c.org}</p>
-                        <p class="text-xs text-slate-600"><i class="fa-regular fa-calendar mr-1 text-slate-400"></i> ${c.date}</p>
+                        <span class="text-[10px] font-semibold uppercase text-slate-400 dark:text-slate-500">${c.cat}</span>
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm">${c.title}</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 dark:text-slate-500">${c.org}</p>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 dark:text-slate-500"><i class="fa-regular fa-calendar mr-1 text-slate-400 dark:text-slate-500"></i> ${c.date}</p>
                     </div>
-                    <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
-                        <button onclick="openCertModal('${c.img}','${c.title.replace(/'/g, "\\'")}','${c.org} • ${c.date}')" class="text-[11px] font-medium text-slate-600 hover:text-slate-900"><i class="fa-solid fa-image mr-1"></i> View Image</button>
-                        ${c.verify ? `<span class="text-[10px] font-mono text-slate-400">${c.verify}</span>` : ''}
+                    <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                        <button onclick="openCertModal('${c.img}','${c.title.replace(/'/g, "\\'")}','${c.org} • ${c.date}')" class="text-[11px] font-medium text-slate-600 dark:text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:text-white"><i class="fa-solid fa-image mr-1"></i> View Image</button>
+                        ${c.verify ? `<span class="text-[10px] font-mono text-slate-400 dark:text-slate-500">${c.verify}</span>` : ''}
                     </div>
                 </div>
             `).join('');
@@ -948,6 +953,25 @@
                 }, 300);
             }, 3500);
         }
+
+        // Dark Mode Toggle
+        function toggleDark() {
+            const html = document.documentElement;
+            html.classList.toggle('dark');
+            const isDark = html.classList.contains('dark');
+            try { localStorage.setItem('portfolio-dark', isDark ? '1' : '0'); } catch(e){}
+            const icon = document.getElementById('darkIcon');
+            if (icon) icon.className = isDark ? 'fa-solid fa-sun text-sm' : 'fa-solid fa-moon text-sm';
+        }
+        (function(){
+            try {
+                if (localStorage.getItem('portfolio-dark') === '1') {
+                    document.documentElement.classList.add('dark');
+                    const icon = document.getElementById('darkIcon');
+                    if (icon) icon.className = 'fa-solid fa-sun text-sm';
+                }
+            } catch(e){}
+        })();
     </script>
 </body>
 </html>
