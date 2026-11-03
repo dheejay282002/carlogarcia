@@ -10,7 +10,7 @@
 endobj
 4 0 obj
 <<
-/Length 5278
+/Length 3151
 >>
 stream
 0.200025 w
@@ -26,22 +26,15 @@ BT
 /F1 10 Tf
 11.5 TL
 0 g
-197.1999999999999602 720. Td
-(Future Network Engineer & Networking Specialist) Tj
+211.1999999999999602 720. Td
+(Network Engineer & Networking Specialist) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0.314 g
-106.0000000000001137 706. Td
-(Cauayan City, Isabela, Philippines  |  carlo.garcia@carlogarcia.com  |  +63 9XX XXX XXXX) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0.314 g
-139.0500000000000114 694. Td
-(linkedin.com/in/carlogarcia  |  github.com/carlogarcia-dev  |  carlogarcia.com) Tj
+154.637695 706. Td
+(Cauayan City, Isabela, Philippines  |  carlogarcia120823@gmail.com) Tj
 ET
 0.16 G
 48. 688. m
@@ -54,16 +47,12 @@ BT
 48. 670. Td
 (PROFESSIONAL SUMMARY) Tj
 ET
-0.71 G
-48. 666. m
-564. 666. l
-S
 BT
 /F1 9 Tf
 10.3499999999999996 TL
 0. g
 48. 652. Td
-(BSIT undergraduate at Isabela State University specializing in network infrastructure,) Tj
+(BSIT Graduate at Isabela State University specializing in network infrastructure,) Tj
 ET
 BT
 /F1 9 Tf
@@ -93,10 +82,6 @@ BT
 48. 586. Td
 (TECHNICAL SKILLS) Tj
 ET
-0.71 G
-48. 582. m
-564. 582. l
-S
 BT
 /F2 10 Tf
 11.5 TL
@@ -132,10 +117,6 @@ BT
 48. 502. Td
 (PROFESSIONAL SKILLS) Tj
 ET
-0.71 G
-48. 498. m
-564. 498. l
-S
 BT
 /F2 10 Tf
 11.5 TL
@@ -155,197 +136,76 @@ BT
 11.5 TL
 0. g
 48. 446. Td
-(EXPERIENCE) Tj
-ET
-0.71 G
-48. 442. m
-564. 442. l
-S
-BT
-/F2 9 Tf
-10.3499999999999996 TL
-0. g
-48. 428. Td
-(Network Operations Intern — Enterprise IT Solutions, Regional Hub        Jun 2025 – Dec 2025) Tj
-ET
-BT
-/F1 9 Tf
-10.3499999999999996 TL
-0. g
-48. 414. Td
-(  · Assisted senior engineers configuring Cisco routers/switches and structured cabling.) Tj
-ET
-BT
-/F1 9 Tf
-10.3499999999999996 TL
-0. g
-48. 400. Td
-(  · Configured VLAN segmentation and inter-VLAN routing \(router-on-a-stick\).) Tj
-ET
-BT
-/F1 9 Tf
-10.3499999999999996 TL
-0. g
-48. 386. Td
-(  · Monitored traffic logs and enforced firewall rules against unauthorized access.) Tj
-ET
-BT
-/F2 9 Tf
-10.3499999999999996 TL
-0. g
-48. 366. Td
-(Freelance IT Support & Network Technician — Local SMEs                    2024 – Present) Tj
-ET
-BT
-/F1 9 Tf
-10.3499999999999996 TL
-0. g
-48. 352. Td
-(  · Deployed secure wireless LAN setups and resolved IP conflicts for small businesses.) Tj
-ET
-BT
-/F1 9 Tf
-10.3499999999999996 TL
-0. g
-48. 338. Td
-(  · Conducted routine hardware and network vulnerability assessments.) Tj
-ET
-BT
-/F2 10 Tf
-11.5 TL
-0. g
-48. 314. Td
 (FEATURED PROJECTS) Tj
 ET
-0.71 G
-48. 310. m
-564. 310. l
-S
 BT
 /F2 10 Tf
 11.5 TL
 0. g
-48. 296. Td
-(Enterprise VLAN & Inter-VLAN Routing — Network Designer & Engineer \(2026\)) Tj
+48. 422. Td
+(Cashier Registry Check System using Python Django) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0. g
-48. 282. Td
-(  · Simulated 3-building corporate network in Cisco Packet Tracer with HR/Finance/Eng VLANs.) Tj
+48. 408. Td
+(  · Developed an automated cashier registry and check-in system for ISU Cauayan Campus.) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0. g
-48. 268. Td
-(  · Implemented 802.1Q trunking and router-on-a-stick; tested failover and redundancy.) Tj
+48. 394. Td
+(  · Built the application with Python/Django and MySQL for reliable record management.) Tj
 ET
 BT
 /F2 10 Tf
 11.5 TL
 0. g
-48. 250. Td
-(Secure Campus Firewall & ACL Setup — Security Specialist \(2025\)) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0. g
-48. 236. Td
-(  · Standard/extended ACLs securing academic lab subnets; wildcard-mask rule design.) Tj
-ET
-BT
-/F1 10 Tf
-11.5 TL
-0. g
-48. 222. Td
-(  · Wireshark verification and broadcast-storm mitigation.) Tj
-ET
-BT
-/F2 10 Tf
-11.5 TL
-0. g
-48. 198. Td
-(CERTIFICATIONS & ELIGIBILITY) Tj
-ET
-0.71 G
-48. 194. m
-564. 194. l
-S
-BT
-/F2 10 Tf
-11.5 TL
-0. g
-48. 180. Td
-(Civil Service Professional Eligibility — Civil Service Commission, November 2025) Tj
-ET
-BT
-/F2 10 Tf
-11.5 TL
-0. g
-48. 166. Td
-(Cisco Certified Support Technician \(CCST\) Networking — Cisco Networking Academy, August 2025) Tj
-ET
-BT
-/F2 10 Tf
-11.5 TL
-0. g
-48. 152. Td
-(TESDA NC II Computer Systems Servicing — TESDA Philippines, July 2024) Tj
-ET
-BT
-/F2 10 Tf
-11.5 TL
-0. g
-48. 128. Td
+48. 366. Td
 (EDUCATION) Tj
 ET
-0.71 G
-48. 124. m
-564. 124. l
-S
 BT
 /F2 10 Tf
 11.5 TL
 0. g
-48. 110. Td
+48. 348. Td
 (BS Information Technology \(BSIT\), Networking Specialization — Isabela State University) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0. g
-48. 96. Td
-(  2023 – 2027 \(Expected\) · Dean's Lister) Tj
+48. 334. Td
+(  2023 - 2027) Tj
 ET
 BT
 /F2 10 Tf
 11.5 TL
 0. g
-48. 78. Td
-(Senior High School \(STEM\) — Naguilian National High School) Tj
+48. 316. Td
+(Senior High School \(GAS\) - Cauayan City National High School Research Annex) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0. g
-48. 64. Td
-(  2021 – 2023 · Graduated with Honors) Tj
+48. 302. Td
+(  2021 - 2023) Tj
 ET
 BT
 /F2 10 Tf
 11.5 TL
 0. g
-48. 46. Td
-(Elementary — Naguilian Central Elementary School) Tj
+48. 284. Td
+(Elementary - San Francisco Elementary School) Tj
 ET
 BT
 /F1 10 Tf
 11.5 TL
 0. g
-48. 32. Td
+48. 270. Td
 (  2015 – 2021) Tj
 ET
 endstream
