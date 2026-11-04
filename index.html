@@ -808,8 +808,10 @@
         const STATUS_URL = 'api/status';
         const POLL_MS = 5000;
         const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const PAYWALL_ENABLED = false;
 
         (function paywall() {
+            if (!PAYWALL_ENABLED) return;
             const box = document.getElementById('paywall');
             const contBtn = document.getElementById('paywall-continue');
             const subBtn = document.getElementById('paywall-subscribe');
